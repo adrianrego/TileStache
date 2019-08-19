@@ -92,7 +92,7 @@ class Provider:
                 if mask_ds is None:
                     raise Exception('Failed to create dataset mask.')
 
-                [mask_ds.GetRasterBand(i).SetNoDataValue(float('nan')) for i in xrange(1, src_ds.RasterCount+1)]
+                [mask_ds.GetRasterBand(i).SetNoDataValue(float('nan')) for i in range(1, src_ds.RasterCount+1)]
 
             merc = osr.SpatialReference()
             merc.ImportFromProj4(srs)
